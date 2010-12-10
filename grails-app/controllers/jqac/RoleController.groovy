@@ -65,8 +65,7 @@ class RoleController {
 		roleInstance.users.each{
 			userids<<it.id
 		}
-	   println userids.toString()
-            return [roleInstance: roleInstance,userids:userids]
+            return [roleInstance: roleInstance,userids:userids.join(",")]
         }
     }
 
